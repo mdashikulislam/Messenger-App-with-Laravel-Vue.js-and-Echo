@@ -24,6 +24,16 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+    .composer{
+        textarea{
+            width: 96%;
+            margin: 10px;
+            resize: none;
+            padding: 6px;
+            border: 1px solid;
+            border-color: lightgray;
+            border-radius: 3px;
+        }
+    }
 </style>

@@ -37,6 +37,52 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    .list{
+        flex: 2;
+        max-height: 500px;
+        overflow-y: scroll;
+        border-left: 1px solid #cccccc;
 
+        ul{
+            padding-left: 0;
+            list-style-type: none;
+
+            li{
+                display: flex;
+                padding: 2px;
+                border-bottom: 1px solid #ededed;
+                height: 80px;
+                position: relative;
+                cursor: pointer;
+                .avater {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 40px;
+                        margin: 0 auto;
+                        border-radius: 50%;
+                    }
+                }
+                .contact {
+                    font-size: 12px;
+                    flex: 3;
+                    flex-direction: column;
+                    justify-content: center;
+                    display: flex;
+                    p{
+                        margin: 0;
+
+                    }
+                    p.name{
+                        font-weight: bold;
+                    }
+                }
+            }
+            li.selected{
+                background: #dfdfdf;
+            }
+        }
+    }
 </style>
