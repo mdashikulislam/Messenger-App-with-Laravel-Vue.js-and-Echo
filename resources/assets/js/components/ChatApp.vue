@@ -23,6 +23,10 @@
           }
         },
         mounted(){
+            Echo.private(`messages.${this.user.id}`)
+                .listen('NewMessage',(e)=>{
+                    this.handleIncomingMessage(e.message);
+                });
             axios.get('/contacts')
             .then((response)=>{
                 this.contacts = response.data;
@@ -37,6 +41,16 @@
             },
             incomingMessage(message){
                 this.messages.push(message);
+            },
+            handleIncomingMessage(message){
+
+                if (this.selectedContact && message.from === this.selectedContact.id){
+                    this.messages.push(message);
+                    return;
+                }
+                alert(message.text);
+
+
             }
         },
         components:{Conversation,ContactList}
