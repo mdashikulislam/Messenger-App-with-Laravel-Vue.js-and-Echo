@@ -49,8 +49,6 @@
                     return;
                 }
                 alert(message.text);
-
-
             }
         },
         components:{Conversation,ContactList}

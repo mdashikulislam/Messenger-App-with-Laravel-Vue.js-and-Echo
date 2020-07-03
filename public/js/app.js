@@ -55452,6 +55452,7 @@ var render = function() {
           expression: "text"
         }
       ],
+      attrs: { placeholder: "Type message here...!!!" },
       domProps: { value: _vm.text },
       on: {
         keydown: function($event) {
